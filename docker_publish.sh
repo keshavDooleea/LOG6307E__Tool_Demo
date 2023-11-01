@@ -1,3 +1,4 @@
+#!/bin/bash
 # Build the Docker image
 docker build -f app/Dockerfile -t server_app ./app
 
