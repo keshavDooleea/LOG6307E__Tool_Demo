@@ -99,7 +99,7 @@ resource "aws_alb_listener_rule" "T2_rule" {
 
   condition {
     path_pattern {
-      values = ["/cluster2"]
+      values = ["/cluster1"]
     }
   }
 }

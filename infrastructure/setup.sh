@@ -10,10 +10,10 @@ sudo usermod -a -G docker ec2-user
 sudo service docker start
 
 # Pull the latest image flask_app image from Docker Hub
-sudo docker pull ikrash3d/flask_app_tp1:latest
+sudo docker pull mingxiaoyuan/log6307e_server_app:latest
 
 # In the docker container, expose the ec2 instance id
 export INSTANCE_ID_EC2=$(ec2-metadata --instance-id)
 
 # Run the Flask app inside a Docker container
-sudo docker run -e INSTANCE_ID_EC2="$INSTANCE_ID_EC2" -d -p 80:5000 ikrash3d/flask_app_tp1:latest
+sudo docker run -e INSTANCE_ID_EC2="$INSTANCE_ID_EC2" -d -p 80:5000 mingxiaoyuan/log6307e_server_app:latest
